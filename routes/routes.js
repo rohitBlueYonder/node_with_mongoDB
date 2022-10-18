@@ -7,6 +7,6 @@ const controller = require("../controller/UserController")
 
 //API paths
 
-router.get("/add-user", controller.addUser)
+router.post("/add-user", controller.addUser)
 
 module.exports = router

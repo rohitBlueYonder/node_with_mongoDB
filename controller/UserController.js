@@ -1,7 +1,7 @@
 const { request, response } = require("express")
 const UserModel = require("../models/UserModel")
 
-exports.addUser = (req,res) => {
+exports.addUser = (request,response) => {
     const user = new UserModel({
         fname: request.body.fname,
         lname: request.body.lname,
@@ -16,6 +16,6 @@ exports.addUser = (req,res) => {
         response.send(data)    
     }).
     catch((error) => {
-        res.send(error)
+        response.send(error)
     })
 }

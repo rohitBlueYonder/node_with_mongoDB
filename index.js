@@ -16,8 +16,11 @@ app.listen(3000, () => {
 }
 ) 
 
+
+app.use(express.json())
+
 // default routing
-app.use("/", (req,res)=>{ res.send("Welcome to node applicaiton")})
+// app.use("/welcome", (req,res)=>{ res.send("Welcome to node applicaiton")})
 
 app.use("/user", routes)
 
